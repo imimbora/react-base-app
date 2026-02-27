@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'KBFGText';
+  src: url('/fonts/KBFGTextL.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KBFGText';
+  src: url('/fonts/KBFGTextM.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KBFGText';
+  src: url('/fonts/KBFGTextB.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KBFGDisplay';
+  src: url('/fonts/KBFGDisplayL.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KBFGDisplay';
+  src: url('/fonts/KBFGDisplayM.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KBFGDisplay';
+  src: url('/fonts/KBFGDisplayB.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
