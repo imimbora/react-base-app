@@ -1,4 +1,5 @@
-import type { Preview } from '@storybook/react-vite'
+import type { Preview } from '@storybook/react-vite';
+import '@/app/styles/index.css';
 
 const preview: Preview = {
   parameters: {
@@ -7,6 +8,7 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
+      exclude: ['asChild'],
     },
 
     a11y: {
@@ -16,6 +18,6 @@ const preview: Preview = {
       test: 'todo',
     },
   },
-}
+};
 
-export default preview
+export default preview;
