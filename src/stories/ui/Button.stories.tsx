@@ -23,7 +23,7 @@ const meta = {
     },
     size: {
       control: 'select',
-      options: ['xs', 'sm', 'md', 'lg', 'icon-xs', 'icon-sm', 'icon-md', 'icon-lg'],
+      options: ['xs', 'sm', 'default', 'lg', 'icon-xs', 'icon-sm', 'icon', 'icon-lg'],
       table: {
         type: {
           summary: 'enum',
@@ -96,7 +96,7 @@ export const Link: Story = {
 
 export const Icon: Story = {
   args: {
-    size: 'icon-md',
+    size: 'icon',
   },
   render: (args) => (
     <Button {...args}>
@@ -107,7 +107,7 @@ export const Icon: Story = {
     docs: {
       source: {
         code: `
-          <Button size="icon-md">
+          <Button size="icon">
             <FaceIcon />
           </Button>
         `,
@@ -139,7 +139,7 @@ export const WithIcon: Story = {
 
 export const Rounded: Story = {
   args: {
-    size: 'icon-md',
+    size: 'icon',
   },
   render: (args) => (
     <Button {...args} className="rounded-full">
@@ -150,7 +150,7 @@ export const Rounded: Story = {
     docs: {
       source: {
         code: `
-          <Button size="icon-md" className="rounded-full">
+          <Button size="icon" className="rounded-full">
             <FaceIcon />
           </Button>
         `,
@@ -172,7 +172,7 @@ export const WithSpinner: Story = {
   },
   render: (args) => (
     <div className="flex gap-2">
-      <Button {...args} size="icon-md">
+      <Button {...args} size="icon">
         <Spinner />
       </Button>
       <Button {...args}>
