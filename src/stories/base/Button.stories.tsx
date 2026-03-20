@@ -1,8 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from '@/components/ui/button';
-import { FaceIcon } from '@radix-ui/react-icons';
 import { Spinner } from '@/components/ui/spinner';
+
+import { FaceIcon } from '@radix-ui/react-icons';
 
 const meta = {
   title: 'Base/Button',
