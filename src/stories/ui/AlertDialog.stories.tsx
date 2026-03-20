@@ -1,12 +1,23 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter, AlertDialogCancel, AlertDialogAction, AlertDialogMedia } from '@/components/ui/alert-dialog';
+import {
+  AlertDialog,
+  AlertDialogTrigger,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogCancel,
+  AlertDialogAction,
+  AlertDialogMedia,
+} from '@/components/ui/alert-dialog';
 import { Button } from '@/components/ui/button';
 
-import { CircleFadingPlusIcon, BluetoothIcon, Trash2Icon } from "lucide-react"
+import { CircleFadingPlusIcon, BluetoothIcon, Trash2Icon } from 'lucide-react';
 
 const meta = {
-  title: 'UI/AlertDialog',
+  title: 'Feedback/AlertDialog',
   component: AlertDialog,
   parameters: {
     layout: 'centered',
@@ -28,7 +39,8 @@ export const Default: Story = {
         <AlertDialogHeader>
           <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
           <AlertDialogDescription>
-            This action cannot be undone. This will permanently delete your account and remove your data from our servers.
+            This action cannot be undone. This will permanently delete your account and remove your
+            data from our servers.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
@@ -51,7 +63,8 @@ export const Small: Story = {
         <AlertDialogHeader>
           <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
           <AlertDialogDescription>
-          This action cannot be undone. This will permanently delete your account and remove your data from our servers.
+            This action cannot be undone. This will permanently delete your account and remove your
+            data from our servers.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
@@ -60,14 +73,14 @@ export const Small: Story = {
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
-  )
-}
+  ),
+};
 
 export const Media: Story = {
   render: (args) => (
     <AlertDialog {...args}>
       <AlertDialogTrigger asChild>
-        <Button variant="outline">Share Project</Button>
+        <Button>Share Project</Button>
       </AlertDialogTrigger>
 
       <AlertDialogContent>
@@ -86,16 +99,16 @@ export const Media: Story = {
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
-  )
-}
+  ),
+};
 
 export const MediaSmall: Story = {
   render: (args) => (
     <AlertDialog {...args}>
       <AlertDialogTrigger asChild>
-        <Button variant="outline">Show Dialog</Button>
+        <Button>Show Dialog</Button>
       </AlertDialogTrigger>
-      
+
       <AlertDialogContent size="sm">
         <AlertDialogHeader>
           <AlertDialogMedia>
@@ -112,8 +125,8 @@ export const MediaSmall: Story = {
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
-  )
-}
+  ),
+};
 
 export const Destructive: Story = {
   render: (args) => (
@@ -128,15 +141,15 @@ export const Destructive: Story = {
           </AlertDialogMedia>
           <AlertDialogTitle>Delete chat?</AlertDialogTitle>
           <AlertDialogDescription>
-            This will permanently delete this chat conversation. View{" "}
-            <a href="#">Settings</a> delete any memories saved during this chat.
+            This will permanently delete this chat conversation. View <a href="#">Settings</a>{' '}
+            delete any memories saved during this chat.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel variant="outline">Cancel</AlertDialogCancel>
+          <AlertDialogCancel>Cancel</AlertDialogCancel>
           <AlertDialogAction variant="destructive">Delete</AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
-  )
-}
+  ),
+};

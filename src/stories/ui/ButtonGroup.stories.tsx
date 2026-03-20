@@ -7,7 +7,7 @@ import { Label } from '@/components/ui/label';
 import { Plus } from 'lucide-react';
 
 const meta = {
-  title: 'UI/ButtonGroup',
+  title: 'Base/ButtonGroup',
   component: ButtonGroup,
   parameters: {
     layout: 'centered',
@@ -70,10 +70,10 @@ export const Size: Story = {
         </Button>
       </ButtonGroup>
       <ButtonGroup {...args}>
-        <Button size="md">Medium</Button>
-        <Button size="md">Button</Button>
-        <Button size="md">Group</Button>
-        <Button size="icon-md">
+        <Button>Medium</Button>
+        <Button>Button</Button>
+        <Button>Group</Button>
+        <Button size="icon">
           <Plus />
         </Button>
       </ButtonGroup>
@@ -96,7 +96,7 @@ export const Nested: Story = {
   render: (args) => (
     <ButtonGroup {...args}>
       <ButtonGroup>
-        <Button size="icon-md">
+        <Button size="icon">
           <Plus />
         </Button>
       </ButtonGroup>
@@ -109,7 +109,7 @@ export const Nested: Story = {
 };
 
 /**
- * 버튼 그룹 내 `outline` 이외의 버튼들을 시각적으로 구분하기 위해 ButtonGroupSeparator 컴포넌트를 사용합니다.
+ * 버튼 그룹 내 variant `default` 이외의 버튼들을 시각적으로 구분하기 위해 ButtonGroupSeparator 컴포넌트를 사용합니다.
  */
 export const Separator: Story = {
   render: (args) => (

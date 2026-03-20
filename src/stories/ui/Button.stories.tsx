@@ -5,7 +5,7 @@ import { FaceIcon } from '@radix-ui/react-icons';
 import { Spinner } from '@/components/ui/spinner';
 
 const meta = {
-  title: 'UI/Button',
+  title: 'Base/Button',
   component: Button,
   parameters: {
     layout: 'centered', // 중앙 정렬
@@ -14,7 +14,7 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['primary', 'destructive', 'outline', 'secondary', 'ghost', 'link'],
+      options: ['primary', 'destructive', 'default', 'secondary', 'ghost', 'link'],
       table: {
         type: {
           summary: 'enum',
