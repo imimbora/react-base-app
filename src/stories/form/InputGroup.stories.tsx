@@ -27,7 +27,7 @@ const meta = {
     docs: {
       description: {
         component:
-          '인풋 내에 표시할 `InputGroupAddon` 컴포넌트는 `align` 속성을 사용하여 상대적인 위치를 지정할 수 있습니다.',
+          '인풋 내에 아이콘, 버튼, 텍스트 등을 추가하기 위해 `InputGroup`을 사용합니다.<br> 인풋 내에 표시할 `InputGroupAddon` 컴포넌트는 `align` 속성을 사용하여 상대적인 위치를 지정할 수 있습니다.',
       },
     },
   },
@@ -99,12 +99,10 @@ export const InlineBoth: Story = {
   render: (args) => (
     <InputGroup>
       <InputGroupInput placeholder="Search..." />
-      <InputGroupAddon {...args}>
+      <InputGroupAddon>
         <SearchIcon />
       </InputGroupAddon>
-      <InputGroupAddon align="inline-end" {...args}>
-        12 results
-      </InputGroupAddon>
+      <InputGroupAddon align="inline-end">12 results</InputGroupAddon>
     </InputGroup>
   ),
 };

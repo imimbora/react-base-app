@@ -24,11 +24,15 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: (args) => <Input {...args} placeholder="Enter text" />,
+  args: {
+    placeholder: 'Enter text',
+    disabled: false,
+    'aria-invalid': false,
+  },
 };
 
 /**
- * 인풋을 제목/내용과 함께 사용하기 위해 Field, FieldLabel, FieldDescription을 사용합니다.
+ * 제목/내용과 함께 사용하기 위해 Field, FieldLabel, FieldDescription을 사용합니다.
  */
 export const InputField: Story = {
   name: 'Field',
@@ -72,24 +76,30 @@ export const Group: Story = {
  * 비활성 스타일을 위해 `Field` 컴포넌트에 `data-disabled` 속성을 추가합니다.
  */
 export const Disabled: Story = {
+  args: {
+    disabled: true,
+  },
   render: (args) => (
     <Field data-disabled>
       <FieldLabel htmlFor="input-disabled">Email</FieldLabel>
-      <Input id="input-disabled" type="email" placeholder="Email" disabled {...args} />
+      <Input id="input-disabled" type="email" placeholder="Email" {...args} />
       <FieldDescription>This field is currently disabled.</FieldDescription>
     </Field>
   ),
 };
 
 /**
- * 인풋이 유효하지 않을 때 `aria-invalid`를 사용합니다.<br>
+ * 값이 유효하지 않을 때 `aria-invalid`를 사용합니다.<br>
  * 유효하지 않은 스타일을 위해 `Field` 컴포넌트에 `data-invalid` 속성을 추가합니다.
  */
 export const Invalid: Story = {
+  args: {
+    'aria-invalid': true,
+  },
   render: (args) => (
     <Field data-invalid>
       <FieldLabel htmlFor="input-invalid">Invalid Input</FieldLabel>
-      <Input id="input-invalid" placeholder="Error" aria-invalid {...args} />
+      <Input id="input-invalid" placeholder="Error" {...args} />
       <FieldDescription>This field contains validation errors.</FieldDescription>
     </Field>
   ),
