@@ -61,8 +61,10 @@ export const Default: Story = {
     docs: {
       source: {
         code: `
-        const [checked, setChecked] = useState<boolean>(false);
-        <Switch checked={checked} onCheckedChange={setChecked} />
+        export function Example() {
+          const [checked, setChecked] = useState<boolean>(false);
+          return <Switch checked={checked} onCheckedChange={setChecked} />
+        }
         `,
       },
     },
