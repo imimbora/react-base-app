@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Input } from '@/components/ui/input';
-import { Field, FieldLabel, FieldDescription, FieldGroup } from '@/components/ui/field';
+import { Field, FieldLabel, FieldDescription, FieldGroup, FieldError } from '@/components/ui/field';
 import { Button } from '@/components/ui/button';
 
 const meta = {
@@ -100,7 +100,7 @@ export const Invalid: Story = {
     <Field data-invalid>
       <FieldLabel htmlFor="input-invalid">Invalid Input</FieldLabel>
       <Input id="input-invalid" placeholder="Error" {...args} />
-      <FieldDescription>This field contains validation errors.</FieldDescription>
+      <FieldError>This field contains validation errors.</FieldError>
     </Field>
   ),
 };

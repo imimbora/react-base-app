@@ -36,6 +36,11 @@ const meta = {
     align: {
       control: 'radio',
       options: ['inline-start', 'inline-end', 'block-start', 'block-end'],
+      table: {
+        type: {
+          summary: 'enum',
+        },
+      },
     },
   },
 } satisfies Meta<typeof InputGroupAddon>;

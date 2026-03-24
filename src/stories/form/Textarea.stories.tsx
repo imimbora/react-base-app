@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Textarea } from '@/components/ui/textarea';
-import { Field, FieldLabel, FieldDescription } from '@/components/ui/field';
+import { Field, FieldLabel, FieldDescription, FieldError } from '@/components/ui/field';
 import { Button } from '@/components/ui/button';
 
 const meta = {
@@ -52,7 +52,6 @@ export const TextareaField: Story = {
 export const Disabled: Story = {
   args: {
     disabled: true,
-    placeholder: 'Type your message here.',
   },
   render: (args) => (
     <Field data-disabled>
@@ -71,7 +70,7 @@ export const Invalid: Story = {
     <Field data-invalid>
       <FieldLabel htmlFor="textarea-invalid">Message</FieldLabel>
       <Textarea id="textarea-invalid" {...args} />
-      <FieldDescription>Please enter a valid message.</FieldDescription>
+      <FieldError>Please enter a valid message.</FieldError>
     </Field>
   ),
 };

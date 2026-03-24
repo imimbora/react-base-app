@@ -15,6 +15,16 @@ const preview: Preview = {
       // 'off' - skip a11y checks entirely
       test: 'todo',
     },
+    options: {
+      storySort: {
+        order: [
+          'Base',
+          ['Button', 'ButtonGroup', 'Toggle'],
+          'Form',
+          ['Input', 'InputGroup', 'Textarea', 'Select', 'Switch', 'Checkbox', 'RadioGroup'],
+        ],
+      },
+    },
   },
 };
 
