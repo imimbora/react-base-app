@@ -160,7 +160,7 @@ export const Etc: Story = {
     <FieldGroup className="max-w-sm">
       <Field orientation="horizontal">
         <Checkbox id="checkbox-1" name="checkbox-1" />
-        <Label htmlFor="checkbox-1">Accept terms and conditions</Label>
+        <FieldLabel htmlFor="checkbox-1">Accept terms and conditions</FieldLabel>
       </Field>
       <Field orientation="horizontal">
         <Checkbox id="checkbox-2" name="checkbox-2" defaultChecked />

@@ -34,6 +34,11 @@ const meta = {
     disabled: {
       control: 'boolean',
     },
+    asChild: {
+      table: {
+        disable: true,
+      },
+    },
     children: {
       control: 'text',
       table: {
@@ -44,34 +49,42 @@ const meta = {
     },
   },
   args: {
-    asChild: false,
     disabled: false,
+    children: 'Button',
   },
 } satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-  args: {
-    children: 'Button',
-  },
+export const Default: Story = {};
+
+export const Variant: Story = {
+  render: (args) => (
+    <div className="flex gap-2">
+      <Button {...args} variant="primary">
+        Primary
+      </Button>
+      <Button {...args} variant="secondary">
+        Secondary
+      </Button>
+      <Button {...args} variant="destructive">
+        Destructive
+      </Button>
+      <Button {...args}>Outline</Button>
+      <Button {...args} variant="ghost">
+        Ghost
+      </Button>
+      <Button {...args} variant="link">
+        Link
+      </Button>
+    </div>
+  ),
 };
 
-export const Primary: Story = {
-  args: {
-    variant: 'primary',
-    children: 'Button',
-  },
-};
-
-export const Secondary: Story = {
-  args: {
-    variant: 'secondary',
-    children: 'Button',
-  },
-};
-
+/**
+ * `asChild` 속성을 사용하여 버튼을 다른 요소로 렌더링할 수 있습니다.
+ */
 export const Link: Story = {
   args: {
     variant: 'link',
@@ -79,7 +92,7 @@ export const Link: Story = {
   },
   render: (args) => (
     <Button {...args}>
-      <a href="#">Button</a>
+      <a href="#">Link</a>
     </Button>
   ),
   parameters: {
@@ -87,7 +100,7 @@ export const Link: Story = {
       source: {
         code: `
           <Button variant="link" asChild>
-            <Link to="/">Button</Link>
+            <Link to="/">Link</Link>
           </Button>
         `,
       },
